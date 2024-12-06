@@ -20,7 +20,7 @@ afterEach(async () => {
   await rm(destinationDir, { recursive: true })
 })
 
-describe('generate', () => {
+describe('.generate()', () => {
   test('rendered output without changing the file name', async () => {
     expect(await generator.generate(null, 'src/index.js')).toEqual([
       `${templateDir}/src/index.js`,
@@ -33,7 +33,7 @@ describe('generate', () => {
     `)
   })
 
-  test('rendered output with changing the file name', async () => {
+  test('rendered output changing the file name', async () => {
     expect(await generator.generate(null, 'package.json.mustache')).toEqual([
       `${templateDir}/package.json.mustache`,
       `${destinationDir}/package.json`,
@@ -64,7 +64,7 @@ describe('generate', () => {
   })
 })
 
-describe('generateAll', () => {
+describe('.generateAll()', () => {
   test('renders all templates yielding results', async () => {
     const results: unknown[] = []
 
@@ -110,9 +110,16 @@ describe('generateAll', () => {
       results.push(result)
     }
 
-    expect(results).toEqual([
-      expect.any(FileExistsError),
-      [`${templateDir}/src/index.js`, `${destinationDir}/src/index.js`],
+    expect(results[0]).toBeInstanceOf(FileExistsError)
+    expect(results[0]).toHaveProperty('templateName', 'package.json.mustache')
+    expect(results[0]).toHaveProperty('fileName', 'package.json')
+    expect(results[0]).toHaveProperty(
+      'destinationPath',
+      `${destinationDir}/package.json`,
+    )
+    expect(results[1]).toEqual([
+      `${templateDir}/src/index.js`,
+      `${destinationDir}/src/index.js`,
     ])
   })
 })
