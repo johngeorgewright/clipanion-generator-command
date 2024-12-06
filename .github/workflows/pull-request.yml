@@ -2,19 +2,16 @@ name: Pull Request
 
 on:
   pull_request:
-
   workflow_call:
-    inputs:
-      build:
-        description: Should it test by building?
-        required: false
-        default: true
-        type: boolean
 
 jobs:
   test:
     name: Test
     runs-on: ubuntu-latest
+
+    permissions:
+      pull-requests: write
+
     strategy:
       matrix:
         node-version: [18, 20, 22]
