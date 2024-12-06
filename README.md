@@ -26,6 +26,12 @@ Now you're ready to write your CLI Commands. All CLI arguments will be passed as
 import { Option } from 'clipanion'
 
 class NewThingCommand extends MyGeneratorCommand {
+  static override paths = [['new']]
+
+  static override usage = MyGeneratorCommand.Usage({
+    description: 'Generates new things',
+  })
+
   override get templateDir() {
     return './templates'
   }
