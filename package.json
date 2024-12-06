@@ -2,7 +2,6 @@
   "name": "clipanion-generator-command",
   "version": "1.0.0",
   "description": "TypeScript library template",
-  "private": true,
   "type": "module",
   "sideEffects": false,
   "exports": {
