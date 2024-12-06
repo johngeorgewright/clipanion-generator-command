@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "esModuleInterop": true,
+    "importHelpers": true,
+    "incremental": true,
+    "lib": ["ES2023"],
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "outDir": "./dist/es",
+    "resolveJsonModule": true,
+    "rootDir": "./src",
+    "sourceMap": true,
+    "strict": true,
+    "target": "ES2023"
+  },
+  "include": ["src"]
+}
