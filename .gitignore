@@ -1,6 +1,7 @@
 dist
 *.log
 node_modules
+test/fixtures/output
 .yarn/*
 !.yarn/cache
 !.yarn/patches
