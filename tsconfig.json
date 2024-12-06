@@ -11,7 +11,7 @@
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "outDir": "./dist/es",
+    "outDir": "./dist",
     "resolveJsonModule": true,
     "rootDir": "./src",
     "sourceMap": true,

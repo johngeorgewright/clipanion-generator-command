@@ -1442,6 +1442,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ansi-colors@npm:^4.1.1":
+  version: 4.1.3
+  resolution: "ansi-colors@npm:4.1.3"
+  checksum: 10/43d6e2fc7b1c6e4dc373de708ee76311ec2e0433e7e8bd3194e7ff123ea6a747428fc61afdcf5969da5be3a5f0fd054602bec56fc0ebe249ce2fcde6e649e3c2
+  languageName: node
+  linkType: hard
+
 "ansi-escapes@npm:^4.2.1":
   version: 4.3.2
   resolution: "ansi-escapes@npm:4.3.2"
@@ -1956,9 +1963,11 @@ __metadata:
     "@types/node": "npm:22.10.1"
     "@types/semantic-release": "npm:20.0.6"
     "@types/source-map-support": "npm:0.5.10"
+    clipanion: "npm:^4.0.0-rc.4"
     commitizen: "npm:4.3.1"
     concurrently: "npm:9.1.0"
     cz-conventional-changelog: "npm:3.3.0"
+    enquirer: "npm:^2.4.1"
     husky: "npm:9.1.7"
     lint-staged: "npm:15.2.10"
     nodemon: "npm:3.1.7"
@@ -1971,8 +1980,21 @@ __metadata:
     tslib: "npm:^2.8.1"
     typescript: "npm:5.7.2"
     vitest: "npm:2.1.8"
+  peerDependencies:
+    clipanion: ^4.0.0-rc.4
   languageName: unknown
   linkType: soft
+
+"clipanion@npm:^4.0.0-rc.4":
+  version: 4.0.0-rc.4
+  resolution: "clipanion@npm:4.0.0-rc.4"
+  dependencies:
+    typanion: "npm:^3.8.0"
+  peerDependencies:
+    typanion: "*"
+  checksum: 10/c3a94783318d91e6b35380a8aa4a6f166964082a51ff2df21a339266223aaab98f5986dd2c37ca7fd640ad1d233b3cd5b24aad64c51537b54ccc9c66ec070eeb
+  languageName: node
+  linkType: hard
 
 "cliui@npm:^7.0.2":
   version: 7.0.4
@@ -2494,6 +2516,16 @@ __metadata:
   dependencies:
     iconv-lite: "npm:^0.6.2"
   checksum: 10/bb98632f8ffa823996e508ce6a58ffcf5856330fde839ae42c9e1f436cc3b5cc651d4aeae72222916545428e54fd0f6aa8862fd8d25bdbcc4589f1e3f3715e7f
+  languageName: node
+  linkType: hard
+
+"enquirer@npm:^2.4.1":
+  version: 2.4.1
+  resolution: "enquirer@npm:2.4.1"
+  dependencies:
+    ansi-colors: "npm:^4.1.1"
+    strip-ansi: "npm:^6.0.1"
+  checksum: 10/b3726486cd98f0d458a851a03326a2a5dd4d84f37ff94ff2a2960c915e0fc865865da3b78f0877dc36ac5c1189069eca603e82ec63d5bc6b0dd9985bf6426d7a
   languageName: node
   linkType: hard
 
@@ -6623,6 +6655,13 @@ __metadata:
     debug: "npm:^4.3.6"
     make-fetch-happen: "npm:^14.0.1"
   checksum: 10/880219a55e9575fcbf2c15129284a13d093fb2a053874151df59b11511d1ba097df359deae7b4e731b16fc3abd8fceda5125a167ec0d16eb926a32b8f778faa8
+  languageName: node
+  linkType: hard
+
+"typanion@npm:^3.8.0":
+  version: 3.14.0
+  resolution: "typanion@npm:3.14.0"
+  checksum: 10/5e88d9e6121ff0ec543f572152fdd1b70e9cca35406d79013ec8e08defa8ef96de5fec9e98da3afbd1eb4426b9e8e8fe423163d0b482e34a40103cab1ef29abd
   languageName: node
   linkType: hard
 

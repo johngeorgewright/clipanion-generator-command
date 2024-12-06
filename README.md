@@ -1,11 +1,11 @@
-# @johngeorgewright/ts-module
+# clipanion-generator-command
 
 This is a template repository for creating a NPM package with TypeScript.
 
 ## Setting up
 
-1. Change all references of `@johngeorgewright/ts-module` to your new package name
-1. Also search for references to `@johngeorgewright` & `ts-module` individually
+1. Change all references of `clipanion-generator-command` to your new package name
+1. Also search for references to `@johngeorgewright` & `clipanion-generator-command` individually
 1. Remove the `private` property from `package.json` (if you want to publically publish your module)
 1. Search for all references of `secrets.` in the `.github` diectory and make sure you have the appropriate secrets registered in GitHub (Your Repo > Settings > Secrets)
 1. Delete the .github/dependabot.yml file (unless you wish to use that instead of renovate)
