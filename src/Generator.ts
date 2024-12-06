@@ -29,7 +29,7 @@ export abstract class Generator {
   async *generateAll(
     templateContext: any,
   ): AsyncGenerator<
-    [templateFileName: string, destinationPath: string] | FileExistsError
+    [templatePath: string, destinationPath: string] | FileExistsError
   > {
     for await (const templateName of this.getTemplateNames()) {
       try {
@@ -62,11 +62,11 @@ export abstract class Generator {
       fileName?: string
       force?: boolean
     } = {},
-  ): Promise<[templateFileName: string, destinationPath: string]> {
+  ): Promise<[templatePath: string, destinationPath: string]> {
     if (!force) await this.assertDestinationInexistence(fileName, templateName)
 
-    const templateFileName = this.getTemplatePath(templateName)
-    const template = (await readFile(templateFileName)).toString()
+    const templatePath = this.getTemplatePath(templateName)
+    const template = (await readFile(templatePath)).toString()
     const destinationPath = this.getDestinationPath(fileName)
     const destDir = pathHelper.dirname(destinationPath)
 
@@ -76,7 +76,7 @@ export abstract class Generator {
       this.renderTemplate(templateContext, template),
     )
 
-    return [templateFileName, destinationPath]
+    return [templatePath, destinationPath]
   }
 
   /**
@@ -138,13 +138,16 @@ export abstract class Generator {
    * Render a template with the given `templateContext`.
    *
    * @param templateContext Any kind of contextual information required when rendering templates.
-   * @param template The contents of a template file.
+   * @param templateContents The contents of a template file.
    */
-  abstract renderTemplate(templateContext: any, template: string): string
+  abstract renderTemplate(
+    templateContext: any,
+    templateContents: string,
+  ): string
 
   #getTemplateNameFromDirectoryEntry(directoryEntry: Dirent) {
     return pathHelper.join(
-      directoryEntry.path.replace(this.templateDir, ''),
+      directoryEntry.parentPath.replace(this.templateDir, ''),
       directoryEntry.name,
     )
   }
