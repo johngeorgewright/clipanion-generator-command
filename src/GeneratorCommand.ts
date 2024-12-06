@@ -1,6 +1,6 @@
 import { Command, Option } from 'clipanion'
 import { type Generator } from './Generator.js'
-import { prompt } from 'enquirer'
+import Enquirer from 'enquirer'
 import { FileExistsError } from './FileExistsError.js'
 
 export abstract class GeneratorCommand extends Command {
@@ -44,7 +44,7 @@ export abstract class GeneratorCommand extends Command {
   }
 
   async #confirmOverwrite(destinationPath: string) {
-    const { overwrite } = await prompt<{ overwrite: boolean }>({
+    const { overwrite } = await Enquirer.prompt<{ overwrite: boolean }>({
       name: 'overwrite',
       type: 'confirm',
       message: `${destinationPath} already exists. Overwrite it?`,
