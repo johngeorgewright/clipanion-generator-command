@@ -4,6 +4,10 @@ on:
   pull_request:
   workflow_call:
 
+concurrency:
+  cancel-in-progress: true
+  group: pull-request-${{ github.event.pull_request.number }}
+
 jobs:
   test:
     name: Test
@@ -36,7 +40,7 @@ jobs:
         run: yarn test --coverage.reporter cobertura
 
       - name: Code Coverage Report
-        if: startsWith(matrix.node-version, steps.node.outputs.node-version)
+        if: startsWith(steps.node.outputs.node-version, matrix.node-version)
         uses: irongut/CodeCoverageSummary@v1.3.0
         with:
           filename: coverage/cobertura-coverage.xml
