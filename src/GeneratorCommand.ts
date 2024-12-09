@@ -16,8 +16,11 @@ export abstract class GeneratorCommand extends Command {
 
   abstract generator: Generator
 
+  protected templateNameFilter: string[] | ((templateName: string) => boolean) =
+    (_templateName: string) => true
+
   protected generateAll() {
-    return this.generator.generateAll(this)
+    return this.generator.generateAll(this, this.templateNameFilter)
   }
 
   protected async generate(
