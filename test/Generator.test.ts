@@ -138,10 +138,10 @@ describe('.generateAll()', () => {
 
   test('filter with a function', async () => {
     vi.spyOn(generator, 'generate')
-    for await (const _ of generator.generateAll(null, (templateName) => {
-      console.info(templateName)
-      return templateName === 'src/index.js'
-    })) {
+    for await (const _ of generator.generateAll(
+      null,
+      (templateName) => templateName === 'src/index.js',
+    )) {
     }
     expect(generator.generate).toHaveBeenCalledOnce()
     expect(generator.generate).toHaveBeenCalledWith(null, 'src/index.js')
