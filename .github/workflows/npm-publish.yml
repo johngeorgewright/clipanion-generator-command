@@ -5,14 +5,8 @@ on:
     branches: [master]
 
 jobs:
-  publish-test:
-    uses: ./.github/workflows/pull-request.yml
-    with:
-      build: false
-
   publish-npm:
     name: NPM
-    needs: [publish-test]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout project
@@ -30,22 +24,14 @@ jobs:
           yarn config set --home 'npmRegistries["https://registry.npmjs.org"].npmAuthToken' '${{ secrets.NPM_TOKEN }}'
           yarn config set --home npmPublishRegistry https://registry.npmjs.org
 
-      - name: Restore cache
-        uses: actions/cache@v4
-        id: cache
-        with:
-          path: |
-            .yarn/unplugged
-            .yarn/install-state.gz
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: ${{ runner.os }}-yarn-
-
       - name: Yarn
-        if: steps.cache.outputs.cache-hit != 'true'
         run: yarn install --immutable
 
       - name: Build
         run: yarn build
+
+      - name: Test
+        run: yarn test
 
       - name: Release
         run: yarn semantic-release
