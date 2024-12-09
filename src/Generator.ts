@@ -28,10 +28,13 @@ export abstract class Generator {
    */
   async *generateAll(
     templateContext: any,
+    filter: string[] | ((templateName: string) => boolean) = () => true,
   ): AsyncGenerator<
     [templatePath: string, destinationPath: string] | FileExistsError
   > {
+    const templateNameFilter = this.#createTemplateNameFilter(filter)
     for await (const templateName of this.getTemplateNames()) {
+      if (!templateNameFilter(templateName)) continue
       try {
         yield await this.generate(templateContext, templateName)
       } catch (error: unknown) {
@@ -146,9 +149,19 @@ export abstract class Generator {
   ): string
 
   #getTemplateNameFromDirectoryEntry(directoryEntry: Dirent) {
-    return pathHelper.join(
-      directoryEntry.parentPath.replace(this.templateDir, ''),
-      directoryEntry.name,
-    )
+    return pathHelper
+      .join(
+        directoryEntry.parentPath.replace(this.templateDir, ''),
+        directoryEntry.name,
+      )
+      .replace(/^\//, '')
+  }
+
+  #createTemplateNameFilter(
+    filter: string[] | ((templateName: string) => boolean),
+  ): (templateName: string) => boolean {
+    return Array.isArray(filter)
+      ? (templateName) => filter.includes(templateName)
+      : filter
   }
 }

@@ -122,4 +122,28 @@ describe('.generateAll()', () => {
       `${destinationDir}/src/index.js`,
     ])
   })
+
+  test('filter with an array of filenames', async () => {
+    vi.spyOn(generator, 'generate')
+    for await (const _ of generator.generateAll(null, [
+      'package.json.mustache',
+    ])) {
+    }
+    expect(generator.generate).toHaveBeenCalledOnce()
+    expect(generator.generate).toHaveBeenCalledWith(
+      null,
+      'package.json.mustache',
+    )
+  })
+
+  test('filter with a function', async () => {
+    vi.spyOn(generator, 'generate')
+    for await (const _ of generator.generateAll(null, (templateName) => {
+      console.info(templateName)
+      return templateName === 'src/index.js'
+    })) {
+    }
+    expect(generator.generate).toHaveBeenCalledOnce()
+    expect(generator.generate).toHaveBeenCalledWith(null, 'src/index.js')
+  })
 })
