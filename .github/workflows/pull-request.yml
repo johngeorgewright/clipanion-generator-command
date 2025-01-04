@@ -8,8 +8,12 @@ concurrency:
   group: pull-request-${{ github.event.pull_request.number }}
 
 jobs:
+  cache:
+    uses: ./.github/workflows/cache.yml
+
   test:
     name: Test
+    needs: [cache]
     runs-on: ubuntu-latest
 
     permissions:
@@ -32,8 +36,11 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Yarn
-        run: yarn install --immutable
+      - name: Restore cache
+        uses: actions/cache@v4
+        with:
+          key: ${{ needs.cache.outputs.yarn-cache-key }}
+          path: ${{ needs.cache.outputs.yarn-cache-path }}
 
       - name: Build
         run: yarn build

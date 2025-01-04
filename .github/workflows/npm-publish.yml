@@ -5,8 +5,12 @@ on:
     branches: [master]
 
 jobs:
+  cache:
+    uses: ./.github/workflows/cache.yml
+
   publish-npm:
     name: NPM
+    needs: [cache]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout project
@@ -24,8 +28,11 @@ jobs:
           yarn config set --home 'npmRegistries["https://registry.npmjs.org"].npmAuthToken' '${{ secrets.NPM_TOKEN }}'
           yarn config set --home npmPublishRegistry https://registry.npmjs.org
 
-      - name: Yarn
-        run: yarn install --immutable
+      - name: Restore cache
+        uses: actions/cache@v4
+        with:
+          key: ${{ needs.cache.outputs.yarn-cache-key }}
+          path: ${{ needs.cache.outputs.yarn-cache-path }}
 
       - name: Build
         run: yarn build
