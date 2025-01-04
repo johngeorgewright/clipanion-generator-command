@@ -41,7 +41,7 @@ const RAW_RUNTIME_STATE =
           ["@vitest/coverage-v8", "virtual:f985a9409348b2649afb6af1611ec94a582e8908358e5c2a4aeda7e51fde7ed502137d75e07410f7ffcfe33c17ce1497c73d5073dc52781dacd0348edd4f4b48#npm:2.1.8"],\
           ["clipanion", "virtual:f985a9409348b2649afb6af1611ec94a582e8908358e5c2a4aeda7e51fde7ed502137d75e07410f7ffcfe33c17ce1497c73d5073dc52781dacd0348edd4f4b48#npm:4.0.0-rc.4"],\
           ["commitizen", "npm:4.3.1"],\
-          ["concurrently", "npm:9.1.0"],\
+          ["concurrently", "npm:9.1.2"],\
           ["cz-conventional-changelog", "npm:3.3.0"],\
           ["enquirer", "npm:2.4.1"],\
           ["husky", "npm:9.1.7"],\
@@ -2661,7 +2661,7 @@ const RAW_RUNTIME_STATE =
           ["@vitest/coverage-v8", "virtual:f985a9409348b2649afb6af1611ec94a582e8908358e5c2a4aeda7e51fde7ed502137d75e07410f7ffcfe33c17ce1497c73d5073dc52781dacd0348edd4f4b48#npm:2.1.8"],\
           ["clipanion", "virtual:f985a9409348b2649afb6af1611ec94a582e8908358e5c2a4aeda7e51fde7ed502137d75e07410f7ffcfe33c17ce1497c73d5073dc52781dacd0348edd4f4b48#npm:4.0.0-rc.4"],\
           ["commitizen", "npm:4.3.1"],\
-          ["concurrently", "npm:9.1.0"],\
+          ["concurrently", "npm:9.1.2"],\
           ["cz-conventional-changelog", "npm:3.3.0"],\
           ["enquirer", "npm:2.4.1"],\
           ["husky", "npm:9.1.7"],\
@@ -2864,10 +2864,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["concurrently", [\
-      ["npm:9.1.0", {\
-        "packageLocation": "./.yarn/cache/concurrently-npm-9.1.0-9685d07eeb-9ed158095a.zip/node_modules/concurrently/",\
+      ["npm:9.1.2", {\
+        "packageLocation": "./.yarn/cache/concurrently-npm-9.1.2-3c33290b4e-52f20653db.zip/node_modules/concurrently/",\
         "packageDependencies": [\
-          ["concurrently", "npm:9.1.0"],\
+          ["concurrently", "npm:9.1.2"],\
           ["chalk", "npm:4.1.2"],\
           ["lodash", "npm:4.17.21"],\
           ["rxjs", "npm:7.8.1"],\
