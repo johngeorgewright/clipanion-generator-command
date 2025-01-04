@@ -19,7 +19,18 @@ export abstract class GeneratorCommand extends Command {
   protected templateNameFilter: string[] | ((templateName: string) => boolean) =
     (_templateName: string) => true
 
-  protected generateAll() {
+  protected async generateAll() {
+    for await (const result of this.#generateAll()) {
+      if (result instanceof FileExistsError) {
+        if (await this.#confirmOverwrite(result.destinationPath))
+          await this.#overwrite(result.templateName, result.fileName)
+      } else {
+        this.context.stdout.write(`📁 ${result[1]}\n`)
+      }
+    }
+  }
+
+  #generateAll() {
     return this.generator.generateAll(this, this.templateNameFilter)
   }
 
@@ -36,14 +47,7 @@ export abstract class GeneratorCommand extends Command {
   }
 
   override async execute() {
-    for await (const result of this.generateAll()) {
-      if (result instanceof FileExistsError) {
-        if (await this.#confirmOverwrite(result.destinationPath))
-          await this.#overwrite(result.templateName, result.fileName)
-      } else {
-        this.context.stdout.write(`📁 ${result[1]}\n`)
-      }
-    }
+    await this.generateAll()
   }
 
   async #confirmOverwrite(destinationPath: string) {
