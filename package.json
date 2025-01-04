@@ -43,7 +43,7 @@
     "@vitest/coverage-v8": "2.1.8",
     "clipanion": "^4.0.0-rc.4",
     "commitizen": "4.3.1",
-    "concurrently": "9.1.0",
+    "concurrently": "9.1.2",
     "cz-conventional-changelog": "3.3.0",
     "husky": "9.1.7",
     "lint-staged": "15.3.0",
