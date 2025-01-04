@@ -40,7 +40,7 @@ class NewThingCommand extends MyGeneratorCommand {
     return `./packages/${this.name}`
   }
 
-  name = Option.String('--name,-n', {
+  readonly name = Option.String('--name,-n', {
     description: 'The name of your new thing',
     required: true,
   })

@@ -24,7 +24,20 @@ export abstract class Generator {
 
   /**
    * Runs {@link generate} on all files found in `templateDir` and yields
-   * each result. It will also yield a {@link FileExistsError} if thrown.
+   * each result. It will also catch and yield {@link FileExistsError}s.
+   *
+   * @example
+   * ```
+   * for await (const result of generator.generateAll(context)) {
+   *   if (result instanceof FileExistsError) {
+   *     if (confirmOverwrite())
+   *       await generate.generate(context, result.templateName, { fileName: result.fileName, force: true })
+   *     else
+   *       continue
+   *   }
+   *   console.info('success')
+   * }
+   * ```
    */
   async *generateAll(
     templateContext: any,
