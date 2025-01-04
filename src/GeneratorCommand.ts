@@ -1,9 +1,11 @@
-import { Command, Option } from 'clipanion'
+import { BaseContext, Command, Option } from 'clipanion'
 import { type Generator } from './Generator.js'
 import Enquirer from 'enquirer'
 import { FileExistsError } from './FileExistsError.js'
 
-export abstract class GeneratorCommand extends Command {
+export abstract class GeneratorCommand<
+  Context extends BaseContext = BaseContext,
+> extends Command<Context> {
   accessor templateDir = Option.String('--templateDir,-t', {
     description: 'The directory where all your templates live',
     required: true,
