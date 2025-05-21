@@ -2,6 +2,7 @@ import { BaseContext, Command, Option } from 'clipanion'
 import { type Generator } from './Generator.js'
 import Enquirer from 'enquirer'
 import { FileExistsError } from './FileExistsError.js'
+import { rm } from 'node:fs/promises'
 
 export abstract class GeneratorCommand<
   Context extends BaseContext = BaseContext,
@@ -29,6 +30,30 @@ export abstract class GeneratorCommand<
       } else {
         this.context.stdout.write(`📁 ${result[1]}\n`)
       }
+    }
+  }
+
+  /**
+   * Remove a destination file with a pre-warning and confirmation
+   *
+   * @example
+   * Say you are about to create a docker-compose.yml file, but want to
+   * make sure that docker-compose.yaml isn't in the project.
+   * ```
+   * await this.removeDestinationFile('docker-compose.yaml', 'docker-compose.yml.mustache')
+   * ```
+   */
+  protected async removeDestinationFile(
+    fileName: string,
+    templateName: string,
+  ) {
+    try {
+      await this.generator.assertDestinationInexistence(fileName, templateName)
+    } catch (error) {
+      if (error instanceof FileExistsError) {
+        if (await this.#confirmOverwrite(error.destinationPath))
+          await rm(error.destinationPath)
+      } else throw error
     }
   }
 
