@@ -65,7 +65,7 @@ export abstract class GeneratorCommand<
     templateName: string,
     opts: { fileName?: string; force?: boolean },
   ) {
-    const [destinationPath] = await this.generator.generate(
+    const [, destinationPath] = await this.generator.generate(
       this,
       templateName,
       opts,
