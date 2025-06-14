@@ -47,7 +47,7 @@ const RAW_RUNTIME_STATE =
           ["cz-conventional-changelog", "npm:3.3.0"],\
           ["enquirer", "npm:2.4.1"],\
           ["husky", "npm:9.1.7"],\
-          ["lint-staged", "npm:16.1.0"],\
+          ["lint-staged", "npm:16.1.1"],\
           ["nodemon", "npm:3.1.10"],\
           ["prettier", "npm:3.5.3"],\
           ["renamer", "npm:5.0.2"],\
@@ -2103,7 +2103,7 @@ const RAW_RUNTIME_STATE =
           ["@vitest/browser", null],\
           ["@vitest/coverage-v8", "virtual:f985a9409348b2649afb6af1611ec94a582e8908358e5c2a4aeda7e51fde7ed502137d75e07410f7ffcfe33c17ce1497c73d5073dc52781dacd0348edd4f4b48#npm:3.2.3"],\
           ["ast-v8-to-istanbul", "npm:0.3.3"],\
-          ["debug", "virtual:fdac25f52b943cb8c88b5ecfd5afc2c8b214f2eb510019fb73db3f510f9bb278d3921a4aca61ba197e6f68a49e5c9bdfbc69ebbbf9e50999407fae5bcb8932db#npm:4.4.1"],\
+          ["debug", "virtual:9c28e90ca24ceeb3ac32a977e2312be15c61a8ebb1dd99dd2915761694e02643c88cd71efbd13d5ca226beb5ce9f52f6fbe955355185722c160a517c2071fb51#npm:4.4.1"],\
           ["istanbul-lib-coverage", "npm:3.2.2"],\
           ["istanbul-lib-report", "npm:3.0.1"],\
           ["istanbul-lib-source-maps", "npm:5.0.6"],\
@@ -2951,7 +2951,7 @@ const RAW_RUNTIME_STATE =
           ["cz-conventional-changelog", "npm:3.3.0"],\
           ["enquirer", "npm:2.4.1"],\
           ["husky", "npm:9.1.7"],\
-          ["lint-staged", "npm:16.1.0"],\
+          ["lint-staged", "npm:16.1.1"],\
           ["nodemon", "npm:3.1.10"],\
           ["prettier", "npm:3.5.3"],\
           ["renamer", "npm:5.0.2"],\
@@ -3453,6 +3453,20 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
+      ["virtual:9c28e90ca24ceeb3ac32a977e2312be15c61a8ebb1dd99dd2915761694e02643c88cd71efbd13d5ca226beb5ce9f52f6fbe955355185722c160a517c2071fb51#npm:4.4.1", {\
+        "packageLocation": "./.yarn/__virtual__/debug-virtual-dca595e7a5/0/cache/debug-npm-4.4.1-6eab84b9f7-8e2709b214.zip/node_modules/debug/",\
+        "packageDependencies": [\
+          ["@types/supports-color", null],\
+          ["debug", "virtual:9c28e90ca24ceeb3ac32a977e2312be15c61a8ebb1dd99dd2915761694e02643c88cd71efbd13d5ca226beb5ce9f52f6fbe955355185722c160a517c2071fb51#npm:4.4.1"],\
+          ["ms", "npm:2.1.3"],\
+          ["supports-color", null]\
+        ],\
+        "packagePeers": [\
+          "@types/supports-color",\
+          "supports-color"\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["virtual:a345fb10767f7507bb836583037bd0538e45be4c0b7d01b378c28de2575623867b926ab06543de0e9efc893338034a56314289b227582d36e15650769aac23d1#npm:4.3.7", {\
         "packageLocation": "./.yarn/__virtual__/debug-virtual-932a24141e/0/cache/debug-npm-4.3.7-385645adf9-71168908b9.zip/node_modules/debug/",\
         "packageDependencies": [\
@@ -3486,20 +3500,6 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@types/supports-color", null],\
           ["debug", "virtual:e18ad1aaaee71856c8618c92ebbcee187ad490da91f816fa2cd1abd550e96735d3b7ca6820bb15ac7883b0178149f52bbfa078bf86f89229e4aed2f3ed5555cc#npm:4.4.0"],\
-          ["ms", "npm:2.1.3"],\
-          ["supports-color", null]\
-        ],\
-        "packagePeers": [\
-          "@types/supports-color",\
-          "supports-color"\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["virtual:fdac25f52b943cb8c88b5ecfd5afc2c8b214f2eb510019fb73db3f510f9bb278d3921a4aca61ba197e6f68a49e5c9bdfbc69ebbbf9e50999407fae5bcb8932db#npm:4.4.1", {\
-        "packageLocation": "./.yarn/__virtual__/debug-virtual-85a306d7cf/0/cache/debug-npm-4.4.1-6eab84b9f7-8e2709b214.zip/node_modules/debug/",\
-        "packageDependencies": [\
-          ["@types/supports-color", null],\
-          ["debug", "virtual:fdac25f52b943cb8c88b5ecfd5afc2c8b214f2eb510019fb73db3f510f9bb278d3921a4aca61ba197e6f68a49e5c9bdfbc69ebbbf9e50999407fae5bcb8932db#npm:4.4.1"],\
           ["ms", "npm:2.1.3"],\
           ["supports-color", null]\
         ],\
@@ -5422,14 +5422,14 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["lint-staged", [\
-      ["npm:16.1.0", {\
-        "packageLocation": "./.yarn/cache/lint-staged-npm-16.1.0-fdac25f52b-c7a52ac955.zip/node_modules/lint-staged/",\
+      ["npm:16.1.1", {\
+        "packageLocation": "./.yarn/cache/lint-staged-npm-16.1.1-9c28e90ca2-f0fe2251d8.zip/node_modules/lint-staged/",\
         "packageDependencies": [\
           ["chalk", "npm:5.4.1"],\
           ["commander", "npm:14.0.0"],\
-          ["debug", "virtual:fdac25f52b943cb8c88b5ecfd5afc2c8b214f2eb510019fb73db3f510f9bb278d3921a4aca61ba197e6f68a49e5c9bdfbc69ebbbf9e50999407fae5bcb8932db#npm:4.4.1"],\
+          ["debug", "virtual:9c28e90ca24ceeb3ac32a977e2312be15c61a8ebb1dd99dd2915761694e02643c88cd71efbd13d5ca226beb5ce9f52f6fbe955355185722c160a517c2071fb51#npm:4.4.1"],\
           ["lilconfig", "npm:3.1.3"],\
-          ["lint-staged", "npm:16.1.0"],\
+          ["lint-staged", "npm:16.1.1"],\
           ["listr2", "npm:8.3.3"],\
           ["micromatch", "npm:4.0.8"],\
           ["nano-spawn", "npm:1.0.2"],\
@@ -8699,7 +8699,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/vite-node-npm-3.2.3-681630615e-0dacd6b70c.zip/node_modules/vite-node/",\
         "packageDependencies": [\
           ["cac", "npm:6.7.14"],\
-          ["debug", "virtual:fdac25f52b943cb8c88b5ecfd5afc2c8b214f2eb510019fb73db3f510f9bb278d3921a4aca61ba197e6f68a49e5c9bdfbc69ebbbf9e50999407fae5bcb8932db#npm:4.4.1"],\
+          ["debug", "virtual:9c28e90ca24ceeb3ac32a977e2312be15c61a8ebb1dd99dd2915761694e02643c88cd71efbd13d5ca226beb5ce9f52f6fbe955355185722c160a517c2071fb51#npm:4.4.1"],\
           ["es-module-lexer", "npm:1.7.0"],\
           ["pathe", "npm:2.0.3"],\
           ["vite", "virtual:681630615e946e2f200c54b059afee56e65208a184161197fdec80c0837941d910208eb4a140e14a179b409cdf368e34755a0f5983828c59cb7f34a62911042b#npm:7.0.0-beta.0"],\
@@ -8738,7 +8738,7 @@ const RAW_RUNTIME_STATE =
           ["@vitest/ui", null],\
           ["@vitest/utils", "npm:3.2.3"],\
           ["chai", "npm:5.2.0"],\
-          ["debug", "virtual:fdac25f52b943cb8c88b5ecfd5afc2c8b214f2eb510019fb73db3f510f9bb278d3921a4aca61ba197e6f68a49e5c9bdfbc69ebbbf9e50999407fae5bcb8932db#npm:4.4.1"],\
+          ["debug", "virtual:9c28e90ca24ceeb3ac32a977e2312be15c61a8ebb1dd99dd2915761694e02643c88cd71efbd13d5ca226beb5ce9f52f6fbe955355185722c160a517c2071fb51#npm:4.4.1"],\
           ["expect-type", "npm:1.2.1"],\
           ["happy-dom", null],\
           ["jsdom", null],\
