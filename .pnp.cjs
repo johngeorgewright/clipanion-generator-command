@@ -43,7 +43,7 @@ const RAW_RUNTIME_STATE =
           ["clipanion", "virtual:f985a9409348b2649afb6af1611ec94a582e8908358e5c2a4aeda7e51fde7ed502137d75e07410f7ffcfe33c17ce1497c73d5073dc52781dacd0348edd4f4b48#npm:4.0.0-rc.4"],\
           ["clipanion-generator-command", "workspace:."],\
           ["commitizen", "npm:4.3.1"],\
-          ["concurrently", "npm:9.1.2"],\
+          ["concurrently", "npm:9.2.0"],\
           ["cz-conventional-changelog", "npm:3.3.0"],\
           ["enquirer", "npm:2.4.1"],\
           ["husky", "npm:9.1.7"],\
@@ -2947,7 +2947,7 @@ const RAW_RUNTIME_STATE =
           ["clipanion", "virtual:f985a9409348b2649afb6af1611ec94a582e8908358e5c2a4aeda7e51fde7ed502137d75e07410f7ffcfe33c17ce1497c73d5073dc52781dacd0348edd4f4b48#npm:4.0.0-rc.4"],\
           ["clipanion-generator-command", "workspace:."],\
           ["commitizen", "npm:4.3.1"],\
-          ["concurrently", "npm:9.1.2"],\
+          ["concurrently", "npm:9.2.0"],\
           ["cz-conventional-changelog", "npm:3.3.0"],\
           ["enquirer", "npm:2.4.1"],\
           ["husky", "npm:9.1.7"],\
@@ -3150,11 +3150,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["concurrently", [\
-      ["npm:9.1.2", {\
-        "packageLocation": "./.yarn/cache/concurrently-npm-9.1.2-3c33290b4e-52f20653db.zip/node_modules/concurrently/",\
+      ["npm:9.2.0", {\
+        "packageLocation": "./.yarn/cache/concurrently-npm-9.2.0-bd0cbdf797-fdf5d3b583.zip/node_modules/concurrently/",\
         "packageDependencies": [\
           ["chalk", "npm:4.1.2"],\
-          ["concurrently", "npm:9.1.2"],\
+          ["concurrently", "npm:9.2.0"],\
           ["lodash", "npm:4.17.21"],\
           ["rxjs", "npm:7.8.1"],\
           ["shell-quote", "npm:1.8.2"],\
