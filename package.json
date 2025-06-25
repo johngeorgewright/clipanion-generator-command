@@ -48,7 +48,7 @@
     "husky": "9.1.7",
     "lint-staged": "16.1.2",
     "nodemon": "3.1.10",
-    "prettier": "3.6.0",
+    "prettier": "3.6.1",
     "renamer": "5.0.2",
     "rimraf": "6.0.1",
     "semantic-release": "24.2.5",
