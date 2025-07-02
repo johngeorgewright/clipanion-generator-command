@@ -1684,12 +1684,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/semantic-release@npm:20.0.6":
-  version: 20.0.6
-  resolution: "@types/semantic-release@npm:20.0.6"
+"@types/semantic-release@npm:21.1.0":
+  version: 21.1.0
+  resolution: "@types/semantic-release@npm:21.1.0"
   dependencies:
-    "@types/node": "npm:*"
-  checksum: 10/7e2c186b07012a0468c1024201be0eda801927093eeb1c7b98d58881b8d66ca7647ff310673eaaeeef312f16c70409386d6a839b6c1a552dd500057678d4b682
+    semantic-release: "npm:*"
+  checksum: 10/0551db80600799fa24fc9d72a5afe6f6d275a91874237c33b0a58627566df41e64113b4b79e407f4275b27b2676a9e248eff48e0e2f1ffdced0d913072451d83
   languageName: node
   linkType: hard
 
@@ -2462,7 +2462,7 @@ __metadata:
     "@semantic-release/github": "npm:11.0.3"
     "@semantic-release/release-notes-generator": "npm:14.0.3"
     "@types/node": "npm:22.16.0"
-    "@types/semantic-release": "npm:20.0.6"
+    "@types/semantic-release": "npm:21.1.0"
     "@types/source-map-support": "npm:0.5.10"
     "@vitest/coverage-v8": "npm:3.2.4"
     clipanion: "npm:^4.0.0-rc.4"
@@ -6607,7 +6607,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semantic-release@npm:24.2.6":
+"semantic-release@npm:*, semantic-release@npm:24.2.6":
   version: 24.2.6
   resolution: "semantic-release@npm:24.2.6"
   dependencies:
