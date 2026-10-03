@@ -43,7 +43,7 @@ const RAW_RUNTIME_STATE =
           ["clipanion", "virtual:f985a9409348b2649afb6af1611ec94a582e8908358e5c2a4aeda7e51fde7ed502137d75e07410f7ffcfe33c17ce1497c73d5073dc52781dacd0348edd4f4b48#npm:4.0.0-rc.4"],\
           ["clipanion-generator-command", "workspace:."],\
           ["commitizen", "npm:4.3.1"],\
-          ["concurrently", "npm:9.2.0"],\
+          ["concurrently", "npm:9.2.4"],\
           ["cz-conventional-changelog", "npm:3.3.0"],\
           ["enquirer", "npm:2.4.1"],\
           ["husky", "npm:9.1.7"],\
@@ -3011,7 +3011,7 @@ const RAW_RUNTIME_STATE =
           ["clipanion", "virtual:f985a9409348b2649afb6af1611ec94a582e8908358e5c2a4aeda7e51fde7ed502137d75e07410f7ffcfe33c17ce1497c73d5073dc52781dacd0348edd4f4b48#npm:4.0.0-rc.4"],\
           ["clipanion-generator-command", "workspace:."],\
           ["commitizen", "npm:4.3.1"],\
-          ["concurrently", "npm:9.2.0"],\
+          ["concurrently", "npm:9.2.4"],\
           ["cz-conventional-changelog", "npm:3.3.0"],\
           ["enquirer", "npm:2.4.1"],\
           ["husky", "npm:9.1.7"],\
@@ -3214,14 +3214,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["concurrently", [\
-      ["npm:9.2.0", {\
-        "packageLocation": "./.yarn/cache/concurrently-npm-9.2.0-bd0cbdf797-fdf5d3b583.zip/node_modules/concurrently/",\
+      ["npm:9.2.4", {\
+        "packageLocation": "./.yarn/cache/concurrently-npm-9.2.4-8ac0b2f3ee-72354357bb.zip/node_modules/concurrently/",\
         "packageDependencies": [\
           ["chalk", "npm:4.1.2"],\
-          ["concurrently", "npm:9.2.0"],\
-          ["lodash", "npm:4.17.21"],\
-          ["rxjs", "npm:7.8.1"],\
-          ["shell-quote", "npm:1.8.2"],\
+          ["concurrently", "npm:9.2.4"],\
+          ["rxjs", "npm:7.8.2"],\
+          ["shell-quote", "npm:1.9.0"],\
           ["supports-color", "npm:8.1.1"],\
           ["tree-kill", "npm:1.2.2"],\
           ["yargs", "npm:17.7.2"]\
@@ -7519,6 +7518,14 @@ const RAW_RUNTIME_STATE =
           ["tslib", "npm:2.8.1"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:7.8.2", {\
+        "packageLocation": "./.yarn/cache/rxjs-npm-7.8.2-80ecda9013-03dff09191.zip/node_modules/rxjs/",\
+        "packageDependencies": [\
+          ["rxjs", "npm:7.8.2"],\
+          ["tslib", "npm:2.8.1"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["safe-buffer", [\
@@ -7639,10 +7646,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["shell-quote", [\
-      ["npm:1.8.2", {\
-        "packageLocation": "./.yarn/cache/shell-quote-npm-1.8.2-6153748703-3ae4804fd8.zip/node_modules/shell-quote/",\
+      ["npm:1.9.0", {\
+        "packageLocation": "./.yarn/cache/shell-quote-npm-1.9.0-50e37d57df-c3bc91e74a.zip/node_modules/shell-quote/",\
         "packageDependencies": [\
-          ["shell-quote", "npm:1.8.2"]\
+          ["shell-quote", "npm:1.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
